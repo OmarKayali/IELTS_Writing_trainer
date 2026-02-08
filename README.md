@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IELTS Writing Trainer ✍️
 
-## Getting Started
+Achieve your target IELTS score with a scientifically designed training platform focusing on high-band copywork and AI-powered exam simulations.
 
-First, run the development server:
+## 🚀 Key Features
 
+### 1. Training Mode (Copywork)
+Internalize Band 9.0 sentence structures and vocabulary through precise copywork training.
+- **Real-time Tracking**: Monitor your Word Per Minute (WPM) and Accuracy.
+- **Scientific Approach**: Copywork helps build muscle memory for academic writing patterns.
+- **Diverse Library**: Practice with Bar Charts, Maps, Processes, and Task 2 Essays.
+
+### 2. Writing Mode (Simulated Exam)
+Experience the real IELTS exam environment for both Task 1 and Task 2.
+- **Task 1**: Analyze graphs, charts, and diagrams with a 20-minute timer.
+- **Task 2**: Write comprehensive essays on diverse topics with a 40-minute timer.
+- **Interactive Interface**: Seamlessly toggle between task instructions and your editor.
+
+### 3. AI Examiner (Powered by Groq & Llama 3)
+Get instant, professional feedback on your submissions.
+- **Detailed Evaluation**: Get scores for Task Achievement, Coherence & Cohesion, Lexical Resource, and Grammatical Range.
+- **Band 9 Model Answers**: Study high-quality model answers generated specifically for your task.
+- **Actionable Tips**: Receive personalized advice on how to improve your score.
+
+---
+
+## 📸 Screenshots
+
+> [!TIP]
+> To add screenshots, upload them to the `public/screenshots/` folder and update the links below.
+
+| Homepage | Training Mode | Writing Interface |
+| :---: | :---: | :---: |
+| ![Homepage Placeholder](https://via.placeholder.com/400x250?text=Homepage+Screenshot) | ![Training Placeholder](https://via.placeholder.com/400x250?text=Training+Mode+Screenshot) | ![Writing Placeholder](https://via.placeholder.com/400x250?text=Writing+Mode+Screenshot) |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **AI Engine**: [Groq SDK](https://groq.com/) using `Llama 3.3 70B`
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/OmarKayali/IELTS_Writing_trainer.git
+cd IELTS_Writing_trainer
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Environment Variables
+Create a `.env.local` file in the root directory and add your Groq API Key:
+```env
+GROQ_API_KEY=your_api_key_here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run the development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+This project is private and intended for personal training.
