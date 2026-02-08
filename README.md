@@ -26,12 +26,24 @@ Get instant, professional feedback on your submissions.
 
 ## 📸 Screenshots
 
-> [!TIP]
-> To add screenshots, upload them to the `public/screenshots/` folder and update the links below.
+### 🏠 Stunning User Interface
+The application features a modern, clean, and responsive design with both Light and Dark mode support.
 
-| Homepage | Training Mode | Writing Interface |
-| :---: | :---: | :---: |
-| ![Homepage Placeholder](https://via.placeholder.com/400x250?text=Homepage+Screenshot) | ![Training Placeholder](https://via.placeholder.com/400x250?text=Training+Mode+Screenshot) | ![Writing Placeholder](https://via.placeholder.com/400x250?text=Writing+Mode+Screenshot) |
+![Homepage](public/images/Homepage_light.png)
+
+### ⌨️ Training Mode
+Master high-band sentence structures through focused copywork drills.
+
+| 📚 Drill Library | ✍️ Active Practice |
+| :---: | :---: |
+| ![Training Drills](public/images/Training_Drills_light.png) | ![Training In Use](public/images/Training_Drill_in_use_light.png) |
+
+### 📝 Writing Exam Simulation
+Experience a professional exam environment for Task 1 and Task 2.
+
+| ⏱️ Exam Interface | 🤖 AI Feedback & Scoring |
+| :---: | :---: |
+| ![Writing In Use](public/images/Writing_Task2_in_use_light.png) | ![AI Feedback](public/images/Writing_Task2_feedback_light.png) |
 
 ---
 
