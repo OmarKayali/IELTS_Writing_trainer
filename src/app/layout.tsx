@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "IELTS Writing Trainer",
     description: "Achieve your target band with professional AI assessments.",
     type: "website",
-    url: "https://ielts-writing-trainer.vercel.app", // User can update this
+    url: "https://writeielts.vercel.app", // User can update this
   },
   twitter: {
     card: "summary_large_image",
