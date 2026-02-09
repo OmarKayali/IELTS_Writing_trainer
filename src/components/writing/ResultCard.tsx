@@ -16,7 +16,6 @@ interface ResultCardProps {
 export default function ResultCard({ result, taskType, userEssay, onBack, timeTaken }: ResultCardProps) {
     const { theme } = useTheme();
     const isDarkMode = theme === 'dark';
-    if (!result || !result.criteria) return null;
 
     const [expandedSections, setExpandedSections] = useState({
         userEssay: true,
@@ -24,6 +23,8 @@ export default function ResultCard({ result, taskType, userEssay, onBack, timeTa
         vocabImprovements: false,
         modelAnswer: true
     });
+
+    if (!result || !result.criteria) return null;
 
     const toggleSection = (section: keyof typeof expandedSections) => {
         setExpandedSections(prev => ({ ...prev, [section]: !prev[section] }));

@@ -24,7 +24,7 @@ interface CharacterProps {
     isFocused: boolean;
 }
 
-const Character = React.memo(function Character({ char, index, inputChar, isCursor, wasMistake, isFocused }: CharacterProps) {
+const Character = React.memo(function Character({ char, inputChar, isCursor, wasMistake, isFocused }: CharacterProps) {
     const { theme } = useTheme();
     const isDarkMode = theme === 'dark';
     let status = 'pending';
@@ -304,9 +304,9 @@ export default function TypingEngine({ task, onComplete }: TypingEngineProps) {
                 {/* Hidden Input */}
                 {/* Hidden Input changed to Textarea for multiline support */}
                 <textarea
-                    ref={inputRef as any}
+                    ref={inputRef as React.RefObject<HTMLTextAreaElement>}
                     value={input}
-                    onChange={handleChange as any}
+                    onChange={handleChange as unknown as React.ChangeEventHandler<HTMLTextAreaElement>}
                     onClick={(e) => setCursorPosition(e.currentTarget.selectionStart)}
                     onSelect={(e) => setCursorPosition(e.currentTarget.selectionStart)}
                     onFocus={handleFocus}

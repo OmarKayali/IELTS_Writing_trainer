@@ -5,7 +5,7 @@ import TypingEngine from '@/components/training/TypingEngine';
 import { TRAINING_TASKS, TrainingTask } from '@/lib/ieltsPrompts';
 import { useTheme } from '@/lib/ThemeContext';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, Clock, Zap, Sun, Moon } from 'lucide-react';
+import { ArrowLeft, BookOpen, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
@@ -16,7 +16,8 @@ export default function TrainingPage() {
     const isDarkMode = theme === 'dark';
 
     useEffect(() => {
-        setIsClient(true);
+        const timer = setTimeout(() => setIsClient(true), 0);
+        return () => clearTimeout(timer);
     }, []);
 
     if (!isClient) return null;

@@ -16,13 +16,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        setIsMounted(true);
-        const savedTheme = localStorage.getItem('theme') as Theme;
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
-        }
+        const timer = setTimeout(() => {
+            setIsMounted(true);
+            const savedTheme = localStorage.getItem('theme') as Theme;
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setTheme('dark');
+            }
+        }, 0);
+        return () => clearTimeout(timer);
     }, []);
 
     useEffect(() => {

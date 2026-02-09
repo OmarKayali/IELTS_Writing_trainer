@@ -1,0 +1,58 @@
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\app\api\evaluate\route.ts
+  71:9  error  'evaluation' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\app\training\page.tsx
+   8:31  warning  'Clock' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   8:43  warning  'Sun' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   8:48  warning  'Moon' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  19:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\app\training\page.tsx:19:9
+  17 |
+  18 |     useEffect(() => {
+> 19 |         setIsClient(true);
+     |         ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  20 |     }, []);
+  21 |
+  22 |     if (!isClient) return null;  react-hooks/set-state-in-effect
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\components\training\TypingEngine.tsx
+   27:57  warning  'index' is defined but never used         @typescript-eslint/no-unused-vars
+  307:38  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  309:47  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\components\writing\ResultCard.tsx
+  21:53  error  React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?  react-hooks/rules-of-hooks
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\components\writing\WritingSession.tsx
+  12:10  warning  'useRouter' is defined but never used     @typescript-eslint/no-unused-vars
+  26:42  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\lib\ThemeContext.tsx
+  19:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Apps Center\Personal Projects\Websites\IELTS Writing Training\src\lib\ThemeContext.tsx:19:9
+  17 |
+  18 |     useEffect(() => {
+> 19 |         setIsMounted(true);
+     |         ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  20 |         const savedTheme = localStorage.getItem('theme') as Theme;
+  21 |         if (savedTheme) {
+  22 |             setTheme(savedTheme);  react-hooks/set-state-in-effect
+
+Γ£û 12 problems (7 errors, 5 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

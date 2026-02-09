@@ -68,7 +68,7 @@ Always output valid JSON only, no markdown.`
     const textOutput = completion.choices[0]?.message?.content;
     if (!textOutput) throw new Error("No response from AI");
 
-    let evaluation = JSON.parse(textOutput);
+    const evaluation = JSON.parse(textOutput);
 
     // Enforce word count penalty
     if (belowMinimum && evaluation.overallBand > maxBandIfPenalty) {

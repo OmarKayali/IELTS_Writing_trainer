@@ -9,9 +9,9 @@ import { Play, Loader2, AlertCircle, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { formatTime } from '@/lib/typingUtils';
 import { useTheme } from '@/lib/ThemeContext';
+import { IELTSEvaluation } from '@/lib/ieltsTypes';
 
 interface WritingSessionProps {
     tasks: WritingTask[];
@@ -23,7 +23,7 @@ export default function WritingSession({ tasks }: WritingSessionProps) {
     const [stage, setStage] = useState<'select' | 'writing' | 'analyzing' | 'result'>('select');
     const [selectedTask, setSelectedTask] = useState<WritingTask | null>(null);
     const [content, setContent] = useState('');
-    const [result, setResult] = useState<any>(null);
+    const [result, setResult] = useState<IELTSEvaluation | null>(null);
     const [error, setError] = useState('');
     const [secondsLeft, setSecondsLeft] = useState(0);
 

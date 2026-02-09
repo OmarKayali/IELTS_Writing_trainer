@@ -16,8 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IELTS Writing Trainer",
-  description: "Improve your IELTS writing speed and accuracy.",
+  title: "IELTS Writing Trainer | AI-Powered Exam Practice",
+  description: "Master the IELTS Writing test with AI-powered feedback, band 9 model answers, and focused typing drills for Task 1 and Task 2.",
+  keywords: ["IELTS", "Writing", "Practice", "AI Examiner", "Llama 3", "IELTS Task 1", "IELTS Task 2", "Exam Simulation"],
+  authors: [{ name: "Omar Kayali" }],
+  openGraph: {
+    title: "IELTS Writing Trainer",
+    description: "Achieve your target band with professional AI assessments.",
+    type: "website",
+    url: "https://ielts-writing-trainer.vercel.app", // User can update this
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IELTS Writing Trainer",
+    description: "AI-powered feedback for IELTS Writing tasks.",
+  }
 };
 
 export default function RootLayout({
