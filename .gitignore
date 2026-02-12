@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal documents
+*.docx
+*.pdf
+*.pptx
+*.txt
+!README.md
+!*.example.txt
+!lint-errors*.txt
